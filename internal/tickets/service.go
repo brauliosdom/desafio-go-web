@@ -41,10 +41,7 @@ func (s *service) AverageDestination(c context.Context, destination string) (tot
 	for _, v := range list {
 		total += v.Price
 	}
-
-	for _, v := range list {
-		v.Price = v.Price / total
-	}
+	total = total / float64(len(list))
 
 	return
 }
