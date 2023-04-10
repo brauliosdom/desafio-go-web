@@ -22,6 +22,7 @@ func main() {
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) { c.String(200, "pong") })
 
+	// fmt.Println(list)
 	router := router.NewRouter(r, list)
 	router.MapRoutes()
 
